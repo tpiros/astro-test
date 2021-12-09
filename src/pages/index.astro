@@ -1,0 +1,25 @@
+---
+// Component Imports
+import Tour from '../components/Tour.astro';
+import Counter from '../components/react/Counter'
+
+const name = 'John';
+---
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <title>Demo</title>
+  <link rel="stylesheet" href={Astro.resolve('../styles/global.css')}>
+</head>
+<body>
+    <div>
+<p class="text-red-600">Hello { name }! :)</p>
+
+        <Tour />
+        <Counter client:load  />
+
+
+    </div>
+</body>
+</html>
